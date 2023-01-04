@@ -61,7 +61,7 @@ li {
   font-size: 1.15em;
   cursor: pointer;
 }
-.navigation li::after {
+.navigation li:hover::after {
   position: absolute;
   content: "";
   bottom: -3px;
@@ -75,6 +75,7 @@ li {
   padding: 12px 22px;
   border-radius: 4px;
   color: var(--teal-blue);
+  cursor: pointer;
 }
 .booking-btn:hover {
   background-color: var(--teal-blue);
@@ -84,9 +85,41 @@ li {
 }
 .booking-btn .button {
   font-weight: 700;
-  cursor: pointer;
 }
-/* .booking-btn .button:hover {
-  color: var(--white-1);
-  font-weight: 700;
-} */
+/*-----------------------------------*\
+  # HERO
+\*-----------------------------------*/
+
+.hero {
+  /* font-family: "Abril Fatface", cursive; */
+}
+.banner img {
+  width: 34rem;
+}
+.hero .grid-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 3rem;
+  gap: 5rem;
+}
+.hero .info {
+  margin-bottom: 60px;
+}
+.hero .grid-list .info > * {
+  margin-bottom: 30px;
+}
+.hero .info h5 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2em;
+  font-weight: 100;
+}
+.hero .info h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 4em;
+  font-weight: 300;
+}
+.hero .info p {
+  font-family: "Heebo", sans-serif;
+  color: var(--spanish-gray);
+}
