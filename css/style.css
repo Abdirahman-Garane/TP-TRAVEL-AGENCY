@@ -1,0 +1,92 @@
+/*-----------------------------------*\
+  #RESET PROPERTIES
+\*-----------------------------------*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+/*-----------------------------------*\
+  #custom properties
+\*-----------------------------------*/
+
+:root {
+  --gray: hsl(0, 0%, 53%);
+  --teal-blue: #029c9c;
+  --silver: hsl(0, 0%, 69%);
+  --yellow: hsl(47, 98%, 50%);
+  --drak-gray: hsl(0, 0%, 40%);
+  --independence: hsl(219, 20%, 32%);
+  --spanish-gray: hsl(0, 0%, 61%);
+  --oxford-blue: hsl(222, 46%, 17%);
+  --black-coral: hsl(223, 8%, 44%);
+  --eerie-black: hsl(210, 11%, 15%);
+  --light-gray: hsl(0, 0%, 80%);
+  --white-2: hsl(0, 0%, 98%);
+  --white-1: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --jet: hsl(0, 0%, 20%);
+}
+/*-----------------------------------*\
+  #header
+\*-----------------------------------*/
+.header-nav {
+  font-family: "Heebo", sans-serif;
+  background-color: var(--teal-blue);
+  padding: 1.6rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  /* align-items: center; */
+}
+.header-nav .title {
+  color: var(--white-1);
+  font-weight: 700;
+  font-size: 1.78em;
+  align-self: center;
+}
+.navigation li {
+  position: relative;
+  margin-right: 3.5rem;
+  color: var(--white-1);
+  font-weight: 700;
+  font-size: 1.15em;
+  cursor: pointer;
+}
+.navigation li::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-1);
+}
+.header-nav .booking-btn {
+  background-color: var(--white-2);
+  padding: 12px 22px;
+  border-radius: 4px;
+  color: var(--teal-blue);
+}
+.booking-btn:hover {
+  background-color: var(--teal-blue);
+  font-weight: 700;
+  color: var(--white-1);
+  outline: 1.5px solid var(--white-1);
+}
+.booking-btn .button {
+  font-weight: 700;
+  cursor: pointer;
+}
+/* .booking-btn .button:hover {
+  color: var(--white-1);
+  font-weight: 700;
+} */
