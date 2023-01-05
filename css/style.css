@@ -96,12 +96,44 @@ li {
 .banner img {
   width: 34rem;
 }
+.banner .shape {
+  width: 4rem;
+}
 .hero .grid-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 3rem;
   gap: 5rem;
+}
+.hero .banner {
+  position: relative;
+}
+.hero .banner .shape-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .banner .shape-2 {
+  position: absolute;
+  right: -25px;
+  top: 80px;
+}
+.hero .banner .shape-3 {
+  position: absolute;
+  bottom: 130px;
+  left: -150px;
+}
+.hero .banner .shape {
+  animation: rotation 3s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(365deg);
+  }
 }
 .hero .info {
   margin-bottom: 60px;
@@ -122,4 +154,35 @@ li {
 .hero .info p {
   font-family: "Heebo", sans-serif;
   color: var(--spanish-gray);
+}
+
+.info .button {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+}
+.info .button .cont-btn,
+.info .button .more-btn {
+  padding: 12px 22px;
+  font-weight: 700;
+}
+.info .button .cont-btn {
+  background-color: var(--teal-blue);
+  color: var(--white-1);
+  border: 2px solid var(--teal-blue);
+  border-radius: 6px;
+}
+.info .button .cont-btn:hover,
+.info .button .more-btn:hover {
+  background-color: var(--white-1);
+  color: var(--teal-blue);
+  border: 2px solid var(--teal-blue);
+  cursor: pointer;
+}
+
+.info .button .more-btn {
+  border: 2px solid var(--spanish-gray);
+  border-radius: 6px;
 }
