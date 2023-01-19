@@ -91,7 +91,7 @@ li {
 \*-----------------------------------*/
 
 .hero {
-  /* font-family: "Abril Fatface", cursive; */
+  padding-bottom: 20px;
 }
 .banner img {
   width: 34rem;
@@ -185,4 +185,34 @@ li {
 .info .button .more-btn {
   border: 2px solid var(--spanish-gray);
   border-radius: 6px;
+}
+
+/* DISTIANTION SECTION */
+
+.destination-section .des-warp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 22px 0;
+}
+
+.destination-section .des-warp > * {
+  padding-bottom: 2.5rem;
+  font-family: "Abril Fatface", cursive;
+}
+
+.destination-section .des-warp .dest-name {
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.destination-section .des-warp .selection {
+  font-size: 2.5em;
+}
+
+.destination-section .grid-list img {
+  width: 100%;
+  object-fit: contain;
 }
