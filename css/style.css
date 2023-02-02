@@ -196,8 +196,15 @@ li {
   flex-direction: column;
   padding: 22px 0;
 }
-
+.destination-section {
+  width: 85vw;
+  margin-inline: auto;
+}
 .destination-section .des-warp > * {
+  padding-bottom: 2.5rem;
+  font-family: "Abril Fatface", cursive;
+}
+.destination-section > * {
   padding-bottom: 2.5rem;
   font-family: "Abril Fatface", cursive;
 }
@@ -212,7 +219,28 @@ li {
   font-size: 2.5em;
 }
 
-.destination-section .grid-list img {
-  width: 100%;
-  object-fit: contain;
+.destination-section .grid-list-column .images1 {
+  background-color: red;
+  width: 530px;
+  height: 400px;
+  /* margin-left: 10px; */
+  background-image: url("images/destination-1.jpg");
+  background-size: contain;
+}
+.grid-list-column {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+/*  */
+.destination-section .grid-list-three-column .images {
+  background-color: red;
+  width: 350px;
+  height: 100px;
+  /* margin-left: 0.4rem; */
+}
+.grid-list-three-column {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
