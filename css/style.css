@@ -219,13 +219,11 @@ li {
   font-size: 2.5em;
 }
 
-.destination-section .grid-list-column .images1 {
-  background-color: red;
+.destination-section .grid-list-column .images1,
+.destination-section .grid-list-column .images2 {
   width: 530px;
-  height: 400px;
-  /* margin-left: 10px; */
-  background-image: url("images/destination-1.jpg");
-  background-size: contain;
+  height: max-content;
+  overflow: hidden;
 }
 .grid-list-column {
   display: grid;
@@ -234,13 +232,28 @@ li {
 }
 /*  */
 .destination-section .grid-list-three-column .images {
-  background-color: red;
   width: 350px;
-  height: 100px;
-  /* margin-left: 0.4rem; */
+  height: max-content;
 }
 .grid-list-three-column {
   display: grid;
   column-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
+}
+
+.destination-section .grid-list-column .images1 img,
+.destination-section .grid-list-column .images2 img {
+  width: 100%;
+  object-fit: cover;
+}
+.destination-section .grid-list-column .images1 img:hover,
+.destination-section .grid-list-column .images2 img:hover,
+.destination-section .grid-list-three-column .images img:hover {
+  transition: 0.15s ease-in;
+  transform: scale(1.01);
+}
+
+.destination-section .grid-list-three-column .images img {
+  width: 100%;
+  overflow: hidden;
 }
