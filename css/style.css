@@ -328,24 +328,29 @@ li {
 .tours-section .card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
 }
 
 .tours-section .card-list .card {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px hsl(0deg 0% 0% / 10%);
 }
 .tours-section .card-list .card > * {
   padding-bottom: 1rem;
 }
 .tours-section .card-list .card .rating-price {
-  padding-top: 2rem;
+  padding: 0.7rem;
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 .tours-section .card-list .card .price {
   background-color: var(--teal-blue);
   padding: 10px;
   border-radius: 6px;
+  color: white;
+  font-family: "Heebo", sans-serif;
 }
 .tours-section .card-list .card .rate {
   margin-left: 30px;
@@ -356,4 +361,22 @@ li {
 .tours-section .card-list .card .rate i,
 .tours-section .card-list .card .rate span {
   color: white;
+}
+
+.tours-section .card-list .card .title {
+  padding: 1.3rem;
+  font-size: 1.3rem;
+  color: var(--drak-gray);
+  font-weight: 600;
+  font-family: "Heebo", sans-serif;
+}
+.tours-section .card-list .card .title:hover {
+  color: var(--teal-blue);
+}
+
+.tours-section .card-list .card .city {
+  font-family: "Heebo", sans-serif;
+  padding-left: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--gray);
 }
