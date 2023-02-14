@@ -37,7 +37,7 @@ li {
 \*-----------------------------------*/
 .header-nav {
   font-family: "Heebo", sans-serif;
-  background-color: var(--teal-blue);
+  background: var(--oxford-blue);
   padding: 1.6rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -74,11 +74,11 @@ li {
   background-color: var(--white-2);
   padding: 12px 22px;
   border-radius: 4px;
-  color: var(--teal-blue);
+  color: var(--oxford-blue);
   cursor: pointer;
 }
 .booking-btn:hover {
-  background-color: var(--teal-blue);
+  background-color: var(--oxford-blue);
   font-weight: 700;
   color: var(--white-1);
   outline: 1.5px solid var(--white-1);
@@ -92,51 +92,33 @@ li {
 
 .hero {
   padding-bottom: 20px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: rgb(86, 88, 94, 0.75);
 }
-.banner img {
-  width: 34rem;
+.video {
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
 }
-.banner .shape {
-  width: 4rem;
-}
+
 .hero .grid-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   padding: 3rem;
   gap: 5rem;
 }
-.hero .banner {
-  position: relative;
-}
-.hero .banner .shape-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.hero .banner .shape-2 {
-  position: absolute;
-  right: -25px;
-  top: 80px;
-}
-.hero .banner .shape-3 {
-  position: absolute;
-  bottom: 130px;
-  left: -150px;
-}
-.hero .banner .shape {
-  animation: rotation 3s infinite linear;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(365deg);
-  }
-}
+
 .hero .info {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+
+  align-self: center;
 }
 .hero .grid-list .info > * {
   margin-bottom: 30px;
@@ -150,6 +132,12 @@ li {
   font-family: "Abril Fatface", cursive;
   font-size: 4em;
   font-weight: 300;
+  color: var(--white-2);
+}
+.hero .grid-list .info {
+  border-radius: 60px;
+  padding: 20px;
+  border: 2px solid white;
 }
 .hero .info p {
   font-family: "Heebo", sans-serif;
@@ -168,19 +156,7 @@ li {
   padding: 12px 22px;
   font-weight: 700;
 }
-.info .button .cont-btn {
-  background-color: var(--teal-blue);
-  color: var(--white-1);
-  border: 2px solid var(--teal-blue);
-  border-radius: 6px;
-}
-.info .button .cont-btn:hover,
-.info .button .more-btn:hover {
-  background-color: var(--white-1);
-  color: var(--teal-blue);
-  border: 2px solid var(--teal-blue);
-  cursor: pointer;
-}
+/*  */
 
 .info .button .more-btn {
   border: 2px solid var(--spanish-gray);
@@ -190,7 +166,8 @@ li {
 /* DISTIANTION SECTION */
 
 .destination-section .des-warp,
-.tours-section .title-tour {
+.tours-section .title-tour,
+.why-section .title-why {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,7 +175,8 @@ li {
   padding: 22px 0;
 }
 .destination-section,
-.tours-section {
+.tours-section,
+.why-section {
   width: 85vw;
   margin-inline: auto;
 }
@@ -220,7 +198,8 @@ li {
 }
 
 .destination-section .des-warp .selection,
-.tours-section .title-tour p:last-child {
+.tours-section .title-tour p:last-child,
+.why-section .title-why p:first-child {
   font-size: 3em;
   font-family: "Abril Fatface", cursive;
 }
@@ -249,8 +228,12 @@ li {
   display: grid;
   column-gap: 10px;
   grid-template-columns: auto auto auto;
+  grid-template-rows: 150px;
+  overflow: hidden;
 }
-
+img {
+  width: 100%;
+}
 .destination-section .grid-list-column .images1 img,
 .destination-section .grid-list-column .images2 img {
   width: 100%;
@@ -346,7 +329,7 @@ li {
   margin-left: 10px;
 }
 .tours-section .card-list .card .price {
-  background-color: var(--teal-blue);
+  background-color: var(--oxford-blue);
   padding: 10px;
   border-radius: 6px;
   color: white;
@@ -371,7 +354,7 @@ li {
   font-family: "Heebo", sans-serif;
 }
 .tours-section .card-list .card .title:hover {
-  color: var(--teal-blue);
+  color: var(--oxford-blue);
 }
 
 .tours-section .card-list .card .city {
@@ -379,4 +362,64 @@ li {
   padding-left: 1.3rem;
   margin-bottom: 20px;
   color: var(--gray);
+}
+
+.why-section > * {
+  padding-bottom: 2rem;
+}
+.why-section .title-why p:first-child {
+  padding-bottom: 2rem;
+}
+.why-section .title-why p:last-child {
+  padding-bottom: 2rem;
+  max-width: 600px;
+  text-align: center;
+  color: var(--silver);
+}
+.why-section .card-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+.why-section .card-items .card > * {
+  padding: 20px;
+}
+.why-section .card-items .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px hsl(0deg 0% 0% / 10%);
+  position: relative;
+}
+.why-section .card-items .card:hover {
+  background-color: var(--teal-blue);
+  cursor: pointer;
+  color: white;
+}
+.why-section .card-items .card::after {
+  position: absolute;
+  content: "";
+  background-color: var(--teal-blue);
+  height: 4px;
+  inset: 0;
+}
+.why-section .card-items .card h1 {
+  padding-block: 3rem;
+}
+.why-section .card-items .card .title {
+  max-width: 250px;
+  color: var(--silver);
+}
+.why-section .card-items .card:hover .title {
+  color: white;
+  cursor: pointer;
+}
+.why-section .card-items .card p:last-child {
+  align-self: end;
+  text-transform: capitalize;
+  color: var(--teal-blue);
+  margin-bottom: 10px;
+}
+.why-section .card-items .card:hover p:last-child {
+  color: white;
+  cursor: pointer;
 }
