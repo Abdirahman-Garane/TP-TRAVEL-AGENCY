@@ -11,6 +11,10 @@
 li {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 /*-----------------------------------*\
   #custom properties
 \*-----------------------------------*/
@@ -28,15 +32,18 @@ li {
   --eerie-black: hsl(210, 11%, 15%);
   --light-gray: hsl(0, 0%, 80%);
   --white-2: hsl(0, 0%, 98%);
-  --white-1: hsl(0, 0%, 100%);
+  --white-1: hsl(0, 4%, 84%);
   --black: hsl(0, 0%, 0%);
   --jet: hsl(0, 0%, 20%);
 }
 /*-----------------------------------*\
   #header
 \*-----------------------------------*/
+body {
+  font-family: "PT Serif", serif;
+}
 .header-nav {
-  font-family: "Heebo", sans-serif;
+  font-family: "PT Serif", serif;
   background: var(--oxford-blue);
   padding: 1.6rem 5rem;
   display: flex;
@@ -176,7 +183,11 @@ li {
 }
 .destination-section,
 .tours-section,
-.why-section {
+.why-section,
+.testamanial-section,
+.footer-top,
+hr,
+.footer-bottom {
   width: 85vw;
   margin-inline: auto;
 }
@@ -191,9 +202,9 @@ li {
 
 .destination-section .des-warp .dest-name,
 .tours-section .title-tour p:first-child {
-  font-size: 5rem;
+  font-size: 2rem;
   font-weight: 500;
-  font-family: "Sassy Frass", cursive;
+  font-family: "PT Serif", serif;
   color: var(--yellow);
 }
 
@@ -310,7 +321,7 @@ img {
 
 .tours-section .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 2rem;
 }
 
@@ -378,7 +389,7 @@ img {
 }
 .why-section .card-items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 2rem;
 }
 .why-section .card-items .card > * {
@@ -422,4 +433,134 @@ img {
 .why-section .card-items .card:hover p:last-child {
   color: white;
   cursor: pointer;
+}
+
+.testamanial-section > * {
+  padding-bottom: 2rem;
+}
+.testamanial-section .title {
+  margin-top: 50px;
+  font-family: "Abril Fatface", cursive;
+}
+.testamanial-section .title h1 {
+  font-family: "PT Serif", serif;
+  line-height: 0.9;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.testamanial-section .card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  column-gap: 2rem;
+}
+
+.testamanial-section .card-list .card {
+  /* width: 440px; */
+  padding: 20px;
+  box-shadow: 0 10px 30px hsl(0deg 0% 0% / 10%);
+}
+.testamanial-section .card-list .card .star {
+  color: var(--yellow);
+  font-size: 0.8rem;
+}
+.testamanial-section .card-list .card .title {
+  font-family: "PT Serif", serif;
+  color: var(--silver);
+  font-size: 0.8rem;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.testamanial-section .card-list .card .profile {
+  display: flex;
+  align-items: center;
+}
+.testamanial-section .card-list .card .profile .image {
+  margin-right: 20px;
+}
+.testamanial-section .card-list .card .profile .image img {
+  width: 90%;
+  object-fit: contain;
+}
+
+.testamanial-section .card-list .card .profile .name p {
+  font-family: "PT Serif", serif;
+  text-transform: capitalize;
+}
+.testamanial-section .card-list .card .profile .name p:nth-child(1) {
+  font-weight: bold;
+}
+.testamanial-section .card-list .card .profile .name p:nth-child(2) {
+  margin-top: 4px;
+  color: var(--silver);
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 100px;
+  padding-bottom: 20px;
+  font-family: "PT Serif", serif;
+}
+.footer-top .footer-list > * {
+  margin-top: 7px;
+  font-family: "PT Serif", serif;
+  text-transform: capitalize;
+}
+.footer-top .footer-list li > * {
+  color: #706f6f;
+}
+.footer-top .name p:nth-child(1) {
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.footer-top .name p:nth-child(2) {
+  margin-top: 10px;
+  align-self: center;
+  text-transform: capitalize;
+  color: var(--silver);
+  font-size: 0.7rem;
+}
+
+.footer-top .footer-list .footer-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  margin-block: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom .name {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.footer-bottom .copyri p {
+  text-transform: capitalize;
+  color: var(--silver);
+  font-size: 0.7rem;
+}
+
+.footer-bottom .social-icon > * {
+  margin-left: 10px;
+  padding: 10px;
+  border: 0.5px solid #333;
+  border-radius: 49%;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.footer-bottom .social-icon > *:hover {
+  background-color: rgb(95, 255, 80);
+  border: none;
+  color: #fff;
 }
