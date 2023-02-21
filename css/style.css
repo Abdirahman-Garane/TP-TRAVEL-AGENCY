@@ -536,9 +536,10 @@ img {
 }
 
 .footer-bottom .social-icon > *:hover {
-  background-color: rgb(95, 255, 80);
+  background-color: #5fff50;
   border: none;
   color: #fff;
+  border: 0.5px solid #5fff50;
 }
 
 @media (min-width: 690px) and (max-width: 999px) {
